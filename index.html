@@ -1,42 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
     <title>Pixel Art Maker!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-    
-    
-     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 </head>
 <body>
+    <!-- Header Section -->
 
-    <div class="appHeader">
-        <h1>Lab: Pixel Art Maker</h1>
+    <div class="jumbotron text-center">
+        <h1><span class="header">Lab: Pixel Art Maker</span></h1>
     </div>
+   
+    <!--setting up the grid size-->
+   
     <div class="container">
-        <h2><span class="firstline">Step 1.</span>Choose Grid Size</h2>
-        <form id="sizePicker">
-            <span>Grid Height:</span>
-            <input type="number" id="inputHeight" name="height" min="1" value="1">
-            <span> Grid Width:</span>
-            <input type="number" id="inputWidth" name="width" min="1" value="1">
-            <input type="submit" value="Make Grid">
-        </form>
+        <div class="row">
+            <div class="col-sm-5">
+                 <div>
+                    <h2 class="text"><span class="firstline">Step 1.</span>Choose Grid Size</h2>
+                        <form id="sizePicker">
+                            <p>Grid Height:</p>
+                                <input type="number" id="inputHeight" name="height" min="1" value="1">
+                            <p> Grid Width:</p>
+                                <input type="number" id="inputWidth" name="width" min="1" value="1"><br>
+                                <input type="submit" value="Make Grid">
+                        </form>
     
+    
+     <!-- The color picker -->
+  
+    <h2 class="text"><span class="firstline">Step 2.</span>Pick A Color</h2>
+        <input type="color" id="colorPicker">
 
-    <h2><span class="firstline">Step 2.</span>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <!-- The Canvas/Table and Pixel Art Making Instructions -->
+   
+            <h2 class="text"><span class="firstline">Step 3.</span><span class="arrow">Design Canvas</span></h2>
+                <div class="pixelDrawingInstruction">
+                        <p><span class="firstlinee">Instructions</span></p>
+                        <p><span class="firstlinee">Single Click</span> to add color</p>
+                        <p><span class="firstlinee">Double Click</span> to remove color</p>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="col-sm-7">
+                    <h1 class="canvas">Show Your Art Skills</h1>
+                        <table id="pixelCanvas"></table>
+                    </div>
+                </div>
+            </div>
+        
+    <!--footer -->
+                    <footer class="page-footer font-small">
 
-
-    <h2><span class="firstline">Step 3.</span><span class="arrow">Design Canvas</span></h2>
-        <div class="pixelDrawingInstruction">
-            <p><span class="firstline">Instructions</span></p>
-            <p><span class="firstline">Single Click</span> to add color</p>
-            <p><span class="firstline">Double Click</span> to remove color</p>
-        </div>
-
-    <table id="pixelCanvas"></table>
-    </div>
+                      <!-- Copyright -->
+                      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                        <a href="https://chykeg.github.io/-Pixel-Art-Maker/"> Pixel Art Maker</a>
+                      </div>
+                      <!-- Copyright -->
+                    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="designs.js"></script>
